@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Indie Wedding Music — modern, indie, and traditional ceremony music ideas for every phase of your wedding." />
+  <title>Indie Wedding Music</title>
+
+  <!-- Romantic editorial + clean modern pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ivory: #fffaf5;
+      --paper: #fffdf9;
+      --blush: #ead3d1;
+      --rose: #b67b7a;
+      --sage: #8d9b83;
+      --sage-dark: #64705d;
+      --ink: #342f2d;
+      --muted: #716a66;
+      --line: #e9dfd8;
+      --shadow: 0 16px 45px rgba(79, 56, 48, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(234, 211, 209, 0.48), transparent 32rem),
+        radial-gradient(circle at top right, rgba(141, 155, 131, 0.20), transparent 30rem),
+        var(--ivory);
+      font-family: "Inter", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 76px 0 44px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--sage-dark);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
+      line-height: 1.05;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 8vw, 6.2rem);
+      letter-spacing: -0.04em;
+    }
+
+    .hero-subtitle {
+      width: min(690px, 100%);
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .spotify-wrap {
+      width: min(820px, 100%);
+      margin: 34px auto 0;
+      padding: 13px;
+      border: 1px solid rgba(182, 123, 122, 0.28);
+      border-radius: 24px;
+      background: rgba(255, 253, 249, 0.78);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .spotify-wrap iframe {
+      display: block;
+      width: 100%;
+      border: 0;
+      border-radius: 16px;
+    }
+
+    .intro {
+      width: min(870px, 100%);
+      margin: 0 auto 64px;
+      padding: 30px 34px;
+      border-left: 3px solid var(--rose);
+      border-radius: 0 18px 18px 0;
+      background: rgba(255, 253, 249, 0.75);
+      color: #544c48;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.3rem, 2.7vw, 1.7rem);
+      line-height: 1.5;
+      box-shadow: 0 12px 35px rgba(79, 56, 48, 0.06);
+    }
+
+    .ceremony-section {
+      margin: 0 0 42px;
+      padding: clamp(24px, 4vw, 42px);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: rgba(255, 253, 249, 0.90);
+      box-shadow: var(--shadow);
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 14px;
+      border-radius: 50%;
+      background: var(--blush);
+      color: #694948;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+
+    .ceremony-section h2 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.025em;
+    }
+
+    .ceremony-section > p {
+      max-width: 850px;
+      margin: 0 0 26px;
+      color: var(--muted);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    table {
+      width: 100%;
+      min-width: 660px;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 16px 18px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+    }
+
+    th {
+      background: linear-gradient(90deg, rgba(234, 211, 209, 0.65), rgba(141, 155, 131, 0.14));
+      color: #574744;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    td:first-child {
+      width: 50%;
+      font-weight: 500;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .song {
+      display: block;
+    }
+
+    .artist {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    footer {
+      padding: 18px 0 54px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .flourish {
+      display: block;
+      margin: 0 auto 14px;
+      color: var(--rose);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.35em;
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        padding-top: 50px;
+      }
+
+      .intro {
+        padding: 24px 24px;
+      }
+
+      .ceremony-section {
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="page-shell">
+      <p class="eyebrow">Ceremony Music Guide</p>
+      <h1>Indie Wedding Music</h1>
+      <p class="hero-subtitle">
+        Alternative, romantic, and timeless music ideas for each moment of your wedding ceremony.
+      </p>
+
+      <div class="spotify-wrap">
+        <iframe
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/artist/2Salm1AJWZ4jsIX2SLLZDi?utm_source=generator"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <div class="intro">
+      Choosing your ceremony music is about creating a natural emotional arc—from the quiet anticipation as guests arrive to the joyful moment you walk back up the aisle as newlyweds. Below are the main musical phases of a wedding ceremony, with both alternative/indie selections and more traditional wedding choices for each.
+    </div>
+
+    <section class="ceremony-section">
+      <span class="section-kicker">1</span>
+      <h2>Prelude — As Guests Arrive</h2>
+      <p>
+        Prelude music is played while guests are arriving and being seated, usually for 15–30 minutes before the ceremony begins. The music should feel warm, romantic, and welcoming without being overly dramatic.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Modern &amp; Indie Options</th>
+              <th>Traditional Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="song">Anchor <span class="artist">— Novo Amor</span></span></td>
+              <td>Air on the G String <span class="artist">— J.S. Bach</span></td>
+            </tr>
+            <tr>
+              <td>Bloom <span class="artist">— The Paper Kites</span></td>
+              <td>Jesu, Joy of Man’s Desiring <span class="artist">— J.S. Bach</span></td>
+            </tr>
+            <tr>
+              <td>Heartbeats <span class="artist">— José González</span></td>
+              <td>Clair de Lune <span class="artist">— Claude Debussy</span></td>
+            </tr>
+            <tr>
+              <td>Mystery of Love <span class="artist">— Sufjan Stevens</span></td>
+              <td>The Swan <span class="artist">— Camille Saint-Saëns</span></td>
+            </tr>
+            <tr>
+              <td>Skinny Love <span class="artist">— Bon Iver</span></td>
+              <td>Gymnopédie No. 1 <span class="artist">— Erik Satie</span></td>
+            </tr>
+            <tr>
+              <td>Young &amp; Beautiful <span class="artist">— Lana Del Rey</span></td>
+              <td>Minuet in G <span class="artist">— Christian Petzold</span></td>
+            </tr>
+            <tr>
+              <td>No One’s Gonna Love You <span class="artist">— Band of Horses</span></td>
+              <td>Prelude in C Major, BWV 846 <span class="artist">— J.S. Bach</span></td>
+            </tr>
+            <tr>
+              <td>Lovesong <span class="artist">— The Cure</span></td>
+              <td>Largo from <em>Xerxes</em> <span class="artist">— Handel</span></td>
+            </tr>
+            <tr>
+              <td>Maps <span class="artist">— Yeah Yeah Yeahs</span></td>
+              <td>Flower Duet from <em>Lakmé</em> <span class="artist">— Léo Delibes</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="ceremony-section">
+      <span class="section-kicker">2</span>
+      <h2>Wedding Party Processional</h2>
+      <p>
+        This music accompanies the entrance of parents, grandparents, bridesmaids, groomsmen, and/or other members of the wedding party. These selections can gradually build anticipation while leaving room for the bride’s entrance to have its own special musical moment.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Modern &amp; Indie Options</th>
+              <th>Traditional Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Falling Slowly <span class="artist">— Glen Hansard &amp; Markéta Irglová</span></td>
+              <td>Canon in D <span class="artist">— Pachelbel</span></td>
+            </tr>
+            <tr>
+              <td>First Day of My Life <span class="artist">— Bright Eyes</span></td>
+              <td>Arioso <span class="artist">— J.S. Bach</span></td>
+            </tr>
+            <tr>
+              <td>Turning Page <span class="artist">— Sleeping at Last</span></td>
+              <td>Sheep May Safely Graze <span class="artist">— J.S. Bach</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="ceremony-section">
+      <span class="section-kicker">3</span>
+      <h2>Bridal Processional — Walking Down the Aisle</h2>
+      <p>
+        The bride’s entrance is often the musical highlight of the ceremony. Slower, expressive selections work especially well here and help make the walk down the aisle feel distinct and memorable.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Modern &amp; Indie Options</th>
+              <th>Traditional Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A Thousand Years <span class="artist">— Christina Perri</span></td>
+              <td>Bridal Chorus (“Here Comes the Bride”) <span class="artist">— Wagner</span></td>
+            </tr>
+            <tr>
+              <td>Flightless Bird, American Mouth <span class="artist">— Iron &amp; Wine</span></td>
+              <td>Trumpet Voluntary <span class="artist">— Jeremiah Clarke</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="ceremony-section">
+      <span class="section-kicker">4</span>
+      <h2>Ceremony Interlude</h2>
+      <p>
+        Some ceremonies include music during a unity candle, communion, signing of the marriage license, prayer, remembrance, or another meaningful pause.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Modern &amp; Indie Options</th>
+              <th>Traditional Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>There Is a Light That Never Goes Out <span class="artist">— The Smiths</span></td>
+              <td>Ave Maria <span class="artist">— Schubert</span></td>
+            </tr>
+            <tr>
+              <td>Starlight <span class="artist">— Muse</span></td>
+              <td>Meditation from <em>Thaïs</em> <span class="artist">— Jules Massenet</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="ceremony-section">
+      <span class="section-kicker">5</span>
+      <h2>Recessional — The Newlyweds’ Exit</h2>
+      <p>
+        Once the couple is pronounced married, the recessional should feel joyful, energetic, and celebratory. This is usually the brightest and most upbeat musical moment of the ceremony.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Modern &amp; Indie Options</th>
+              <th>Traditional Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ho Hey <span class="artist">— The Lumineers</span></td>
+              <td>Wedding March <span class="artist">— Felix Mendelssohn</span></td>
+            </tr>
+            <tr>
+              <td>Home <span class="artist">— Edward Sharpe &amp; The Magnetic Zeros</span></td>
+              <td>Ode to Joy <span class="artist">— Beethoven</span></td>
+            </tr>
+            <tr>
+              <td>Such Great Heights <span class="artist">— The Postal Service</span></td>
+              <td>Hornpipe from <em>Water Music</em> <span class="artist">— Handel</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-shell">
+    <span class="flourish">✦ ✦ ✦</span>
+    Indie Wedding Music
+  </footer>
+</body>
+</html>
